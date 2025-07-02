@@ -1,0 +1,180 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.job-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: all 0.2s ease;
+}
+
+.job-card:hover {
+  background-color: #f0f0ff;
+}
+.search-results-page {
+  display: flex;
+  padding: 20px;
+}
+
+.filter-pane {
+  width: 200px;
+  padding-right: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.results-section {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.active-filters {
+  margin-bottom: 10px;
+}
+
+.filter-badge {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 4px 8px;
+  background-color: #e0e0e0;
+  border-radius: 16px;
+}
+
+.filter-badge button {
+  background: none;
+  border: none;
+  margin-left: 4px;
+  cursor: pointer;
+}
+.job-detail-container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.main-detail {
+  flex: 2;
+}
+
+.related-jobs {
+  flex: 1;
+  border-left: 1px solid #ddd;
+  padding-left: 20px;
+}
+.notification-page {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-section input {
+  flex: 1;
+  padding: 8px;
+}
+
+.form-section button {
+  padding: 8px 16px;
+  background-color: #6200ee;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.existing-alerts ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.admin-form-page {
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-grid input,
+.form-grid textarea {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-grid button {
+  padding: 10px;
+  background-color: #6200ee;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.chat-agent {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
+  max-height: 400px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chat-bubble {
+  max-width: 80%;
+  padding: 8px 12px;
+  margin: 6px 0;
+  border-radius: 12px;
+  word-wrap: break-word;
+}
+
+.chat-bubble.left {
+  background-color: #f1f1f1;
+  align-self: flex-start;
+}
+
+.chat-bubble.right {
+  background-color: #6200ee;
+  color: white;
+  align-self: flex-end;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.chat-input button {
+  border: none;
+  background-color: #6200ee;
+  color: white;
+  padding: 10px 16px;
+  cursor: pointer;
+}
