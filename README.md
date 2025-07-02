@@ -2,6 +2,8 @@
 
 This is the frontend React application for the SE4458 job search platform, similar to Kariyer.net. It connects to a Spring Boot-based microservice backend deployed on Render and communicates through a centralized API Gateway.
 
+[THE IMPORTANT DETAILS ARE HERE](https://github.com/Sehrank8/4458ApiGateway)
+
 ---
 
 ## ✨ Features
