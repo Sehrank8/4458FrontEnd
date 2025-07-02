@@ -4,7 +4,7 @@ import '../App.css';
 
 const NotificationPage = () => {
   const [alerts, setAlerts] = useState([]);
-  const userId = localStorage.getItem('userId') || 'user123'; // fallback to test user
+  const userId = localStorage.getItem('1'); // fallback to test user
 
   useEffect(() => {
     const fetchAlerts = async () => {

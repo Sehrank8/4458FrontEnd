@@ -10,7 +10,7 @@ const JobDetailPage = () => {
   const [relatedJobs, setRelatedJobs] = useState([]);
   const navigate = useNavigate();
 
-  const userId = 'user123';
+  const userId = '1';
 
   useEffect(() => {
     const fetchJobDetail = async () => {
