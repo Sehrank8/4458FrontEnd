@@ -18,8 +18,8 @@ const HomePage = () => {
   useEffect(() => {
     const fetchCityJobs = async () => {
       try {
-        const cityFromBrowser = 'Izmir'; // or detect using geolocation
-        const res = await api.get(`/search/city?city=${cityFromBrowser}`);
+        const cityFromBrowser = 'izmir'; // or detect using geolocation
+        const res = await api.get(`/jobs/city?city=${cityFromBrowser}`);
         setJobs(res.data.content);
         setCity(cityFromBrowser);
       } catch (err) {
@@ -29,7 +29,7 @@ const HomePage = () => {
 
     const fetchSearchHistory = async () => {
       try {
-        const res = await api.get(`/search/history?userId=${userId}`);
+        const res = await api.get(`/jobs/history?userId=1`);
         setRecentSearches(res.data);
       } catch (err) {
         console.error('Search history error:', err);
@@ -67,13 +67,26 @@ const HomePage = () => {
       <button onClick={() => setShowAgent(!showAgent)}>🤖 Chat Agent</button>
 
       <section>
-        <h3>Last Searches</h3>
-        <ul>
-          {recentSearches.map((item, index) => (
-            <li key={index}>{item.city} - {item.title}</li>
-          ))}
-        </ul>
-      </section>
+  <h3>Recent Searches</h3>
+  {recentSearches.length === 0 ? (
+    <p>No recent searches.</p>
+  ) : (
+    <ul className="recent-searches-list">
+      {recentSearches.map((item, index) => (
+        <li
+          key={index}
+          style={{ cursor: 'pointer', color: 'blue' }}
+          onClick={() => {
+            navigate(`/search?title=${item.title}&city=${item.city}`);
+          }}
+        >
+          {item.title} in {item.city}
+        </li>
+      ))}
+    </ul>
+  )}
+</section>
+
 
       <section>
         <h3>{city} Jobs</h3>

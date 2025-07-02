@@ -58,7 +58,7 @@ const NotificationPage = () => {
           value={newAlert.city}
           onChange={handleChange}
         />
-        <button onClick={handleSubmit}>Alarmı Kaydet</button>
+        <button onClick={handleSubmit}>Add Alarm</button>
       </div>
 
       <div className="existing-alerts">
