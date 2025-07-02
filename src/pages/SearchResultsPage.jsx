@@ -4,6 +4,9 @@ import JobCard from '../components/JobCard';
 import { useSearchParams } from 'react-router-dom';
 import '../App.css';
 
+
+const userId = '1';
+
 const SearchResultsPage = () => {
   const [searchParams] = useSearchParams();
   const [jobs, setJobs] = useState([]);
@@ -24,7 +27,7 @@ const SearchResultsPage = () => {
         filters.type.forEach(t => params.append('type', t));
       }
 
-      const res = await api.get(`/jobs/search?${params.toString()}`);
+      const res = await api.get(`/jobs/search?${params.toString()}&userId=${userId}`);
       setJobs(res.data.content || []);
     } catch (err) {
       console.error('Search failed:', err);

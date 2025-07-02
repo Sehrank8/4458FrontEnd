@@ -13,12 +13,12 @@ const HomePage = () => {
   const [recentSearches, setRecentSearches] = useState([]);
   const [showAgent, setShowAgent] = useState(false);
 
-  const userId = 'user123'; // replace with real user if available
+  const userId = '1'; // replace with real user if available
 
   useEffect(() => {
     const fetchCityJobs = async () => {
       try {
-        const cityFromBrowser = 'izmir'; // or detect using geolocation
+        const cityFromBrowser = 'izmir'; 
         const res = await api.get(`/jobs/city?city=${cityFromBrowser}`);
         setJobs(res.data.content);
         setCity(cityFromBrowser);
@@ -41,7 +41,7 @@ const HomePage = () => {
   }, []);
 
   const handleSearch = () => {
-    navigate(`/search?title=${position}&city=${city}`);
+    navigate(`/search?userId=${userId}&title=${position}&city=${city}`);
   };
 
   return (
